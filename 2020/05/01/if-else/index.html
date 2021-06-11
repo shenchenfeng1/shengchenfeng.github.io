@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="盛陈锋的博客">
 <meta property="og:description" content="在我们日常工作中，经常会碰到开发周期非常短的项目或者迭代需求.由于追求速度，常常无法兼顾代码的可读性，最常见的一个例子应该就是if-else.大部分开发者应该自己写过或者在项目中见识过那种多层嵌套的条件判断语句，如果没有详细的代码注释，不仅很难读懂逻辑，还很难维护拓展.这里归纳几种优化条件判断的方案，希望能有所帮助，同样也是自省. 单个if判断123if (a) &amp;#123;    this.fu">
 <meta property="article:published_time" content="2020-05-01T02:27:42.000Z">
-<meta property="article:modified_time" content="2021-06-11T03:30:20.103Z">
+<meta property="article:modified_time" content="2021-06-11T03:35:59.109Z">
 <meta property="article:author" content="盛陈锋">
 <meta property="article:tag" content="js基础">
 <meta name="twitter:card" content="summary">
@@ -352,7 +352,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  431
+                  446
                 </span>
               
 
@@ -401,7 +401,7 @@
 <h5 id="取反"><a href="#取反" class="headerlink" title="取反"></a>取反</h5><p>这种情况下可以先判断异常情况</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a+b &lt; c) <span class="built_in">return</span> alert(<span class="string">'error'</span>)</span><br><span class="line">this.func();</span><br></pre></td></tr></table></figure>
 <h5 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a+b &gt;= c ? this.func() : alert(<span class="string">'error'</span>);</span><br></pre></td></tr></table></figure>
-
+<p>两种方案都能很大程度上精简代码</p>
 <h3 id="else-if判断"><a href="#else-if判断" class="headerlink" title="else if判断"></a>else if判断</h3><p>这种条件判断应该是维护代码时最不想碰到的了，随着逻辑复杂性的提高，代码会变得十分臃肿，维护将变得越来越困难.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (virable === <span class="string">'a'</span>) &#123;</span><br><span class="line">    this.funcA();</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (virable === <span class="string">'b'</span>) &#123;</span><br><span class="line">    this.funcB();</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (virable === <span class="string">'c'</span>) &#123;</span><br><span class="line">    this.funcC();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    this.funcD();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>针对这种场景，可以使用switch语句或者key value方法来优化</p>
@@ -614,7 +614,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">683</span>
+    <span title="Site words total count">698</span>
   
 </div>
 
